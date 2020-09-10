@@ -1,0 +1,15 @@
+version: "3.3"
+
+services:
+  debnode:
+    tty: true
+    image: debnode:1
+    ports:
+      - 4000:4000
+      - 3000:3000
+    volumes:
+      - type: bind
+        source: ./
+        target: /gql
+    #command: ["npm", "run", "dev:server"]
+        
